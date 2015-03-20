@@ -1,0 +1,10 @@
+mysqluser=root
+mysqlpass=
+dstpath=/backup/sqldump
+deleteafterdays=14
+
+logfile=/var/log/nsqldump.log
+nlogrotatepath=/opt/nlogrotate
+
+# This command is executed when there was an error
+senderrormailcommand="echo \"Error while dumping sql, see attached log file!\" | mail -s \"[`hostname`] nsqldump error\" -a \$logfile nonoo@nonoo.hu"
